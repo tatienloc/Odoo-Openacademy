@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="report_infor_card" model="ir.actions.report">
+        <field name="name">Infor card</field>
+        <field name="model">courses</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">openacademy.report_infor_id_card</field>
+        <field name="report_file">openacademy.report_infor_id_card</field>
+        <field name="binding_model_id" ref="model_courses"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

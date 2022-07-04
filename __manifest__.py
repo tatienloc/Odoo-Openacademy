@@ -32,6 +32,8 @@
         'views/course_view.xml',
         'views/description_view.xml',
         'views/manage_class_view.xml',
+        'report/report_infor_card.xml',
+        'report/report.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

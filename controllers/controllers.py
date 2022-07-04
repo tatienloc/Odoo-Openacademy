@@ -1,16 +1,21 @@
-from odoo import http
+#from odoo import http
 
 
-class Openacademy(http.Controller):
-     @http.route('/openacademy' , auth="public" , type="json" )
-     def index(self, **kw):
+#class Openacademy(http.Controller):
+#     @http.route('/openacademy' , auth="public" , type="json" )
+#     def index(self):
+#          for rec in self:
+#               dele = self.env["courses"].browse(20)
+#               dele.unlink()
+
+
 # sửa dữ liệu
-         contect = http.request.env["courses"].sudo().search([("id" , "=" , 26)])
-         contect.write({"name" : kw["name"] ,
-                        "email" : kw["email"] ,
-                        "phone" : kw["phone"] ,
-                        "course" : kw["course"]})
-         return kw
+#         contect = http.request.env["courses"].sudo().search([("id" , "=" , 26)])
+#         contect.write({"name" : kw["name"] ,
+#                        "email" : kw["email"] ,
+#                        "phone" : kw["phone"] ,
+#                        "course" : kw["course"]})
+#         return kw
 
 
 
@@ -26,7 +31,7 @@ class Openacademy(http.Controller):
 #         contacts = http.request.env['courses'].sudo().search([])
 
 #         contact_list = []
-#        for contact in contacts:
+#         for contact in contacts:
 #           contact_list.append(
 #          {
 #                'name' : contact.name ,
