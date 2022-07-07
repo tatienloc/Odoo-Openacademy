@@ -4,10 +4,8 @@
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="o">
                 <t t-call="web.external_layout">
-                    <p>Name: <span t-field="o.name"/> </p>
-                    <p>Email: <span t-field="o.email"/> </p>
-                    <p>Phone: <span t-field="o.phone"/> </p>
-                    <p>Course : <span t-field="o.course"/> </p>
+                    <p>Title : <span t-field="o.title"/> </p>
+                    <p>Description : <span t-field="o.description"/> </p>
                 </t>
             </t>
         </t>

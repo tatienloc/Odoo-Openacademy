@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import models , course , course_descripstion , manage_class
+from . import models , course , session , partner

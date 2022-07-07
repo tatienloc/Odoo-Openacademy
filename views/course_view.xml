@@ -5,10 +5,8 @@
         <field name="model">courses</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
-                <field name="email"/>
-                <field name="phone"/>
-                <field name="course"/>
+                <field name="title"/>
+                <field name="responsible_id"/>
             </tree>
         </field>
     </record>
@@ -17,20 +15,41 @@
         <field name="name">Course.form</field>
         <field name="model">courses</field>
         <field name="arch" type="xml">
-            <form>
+            <form string="Idea form">
                 <sheet>
-                    <group>
-                        <group>
-                            <field name="name"/>
-                            <field name="email"/>
-                        </group>
-                        <group>
-                            <field name="phone"/>
-                            <field name="course"/>
-                        </group>
+                <group colspan="4">
+                    <group colspan="2" col="2">
+                        <separator string="General stuff" colspan="2"/>
+                        <field name="title"/>
+                        <field name="responsible_id"/>
                     </group>
+                    <notebook colspan="4">
+                        <page string="Description">
+                            <field name="description" nolabel="1" placeholder="Idea description..."/>
+                        </page>
+                        <page string="Sessions">
+                            <field name="session_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="instructor_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </group>
                 </sheet>
             </form>
+        </field>
+    </record>s
+
+    <record id="course_view_search" model="ir.ui.view">
+        <field name="name">course.search</field>
+        <field name="model">courses</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="title"/>
+                <field name="description"/>
+            </search>
         </field>
     </record>
 
@@ -42,12 +61,14 @@
     </record>
 
     <menuitem id="course_menu_root"
-              name="Course"
-              groups="group_courses_user,group_courses_manager"/>
+              name="Course"/>
+             <!-- groups="group_courses_user,group_courses_manager" -->
+
 
     <menuitem id="course_menu"
               parent="course_menu_root"
               name="A course"
-              action="course_action"
-              groups="group_courses_user,group_courses_manager"/>
+              action="course_action"/>
+          <!--    groups="group_courses_user,group_courses_manager" -->
+
 </odoo>

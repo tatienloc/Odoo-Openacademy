@@ -18,7 +18,7 @@
         </record>
     </data>
 
-    <data>
+<!--    <data>
         <record id="courses_rule" model="ir.rule">
             <field name="name">Only read </field>
             <field name="model_id" ref="model_courses"/>
@@ -28,15 +28,5 @@
             <field name="perm_unlink" eval="1"/>
             <field name="domain_force">["|",("create_uid","=",False),("create_uid","=",user.id)]</field>
         </record>
-
-        <record id="manage_class_rule" model="ir.rule">
-            <field name="name">Only read</field>
-            <field name="model_id" ref="model_manage_class"/>
-            <field name="perm_read" eval="1"/>
-            <field name="perm_write" eval="1"/>
-            <field name="perm_create" eval="1"/>
-            <field name="perm_unlink" eval="1"/>
-            <field name="domain_force">["|",("create_uid","=",False),("create_uid","=",user.id)]</field>
-        </record>
-    </data>
+    </data> -->
 </odoo>

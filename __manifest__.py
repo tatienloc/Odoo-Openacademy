@@ -24,14 +24,11 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'security/openacademy_security.xml',
+        #'security/openacademy_security.xml',
         'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
         'views/course_view.xml',
-        'views/description_view.xml',
-        'views/manage_class_view.xml',
+        'views/session_views.xml',
+        'views/partner_view.xml',
         'report/report_infor_card.xml',
         'report/report.xml',
     ],
