@@ -20,15 +20,19 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base',
+                'product',
+                ],
 
     # always loaded
     'data': [
         #'security/openacademy_security.xml',
+        'security/openacademy_security.xml',
         'security/ir.model.access.csv',
         'views/course_view.xml',
         'views/session_views.xml',
         'views/partner_view.xml',
+        'views/product_template.xml',
         'report/report_infor_card.xml',
         'report/report.xml',
     ],

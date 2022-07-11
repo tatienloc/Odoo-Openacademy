@@ -8,7 +8,32 @@
                 <field name="name"/>
                 <field name="course_id"/>
                 <field name="taken_seats" widget="progressbar"/>
+                <field name="active"/>
             </tree>
+        </field>
+    </record>
+
+    <record id="session_view_kanban" model="ir.ui.view">
+        <field name="name">session.kanban</field>
+        <field name="model">session</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kaban_global_click">
+                            <div class="oe_kaban_details">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <strong><field name="name"/></strong>
+                                        <field name="course_id"/>
+                                        <field name="taken_seats" widget="progressbar"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
 
@@ -43,7 +68,7 @@
         <field name="name">Session</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">session</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,kanban</field>
     </record>
 
     <menuitem id="session_menu"

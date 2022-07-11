@@ -18,7 +18,7 @@
             <form string="Idea form">
                 <sheet>
                 <group colspan="4">
-                    <group colspan="2" col="2">
+                    <group name="Title" colspan="2" col="2">
                         <separator string="General stuff" colspan="2"/>
                         <field name="title"/>
                         <field name="responsible_id"/>
@@ -40,7 +40,23 @@
                 </sheet>
             </form>
         </field>
-    </record>s
+    </record>
+
+<!--    <record id="course_view_form2" model="ir.ui.view">
+        <field name="name">course.form2</field>
+        <field name="model">courses</field>
+        <field name="inherit_id" ref="openacademy.course_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='Title']" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <button name="button_product_ids_count" type="object"
+                            class="oe_star_button" icon="fa-bullhorn">
+
+                    </button>
+                </div>
+            </xpath>
+        </field>
+    </record> -->
 
     <record id="course_view_search" model="ir.ui.view">
         <field name="name">course.search</field>

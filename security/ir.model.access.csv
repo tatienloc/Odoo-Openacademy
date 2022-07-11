@@ -1,2 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_courses_user,courses_user,model_courses,,1,0,0,0
+access_courses_user,courses_user,model_courses,group_courses_user,1,0,0,0
+access_courses_manager,courses_manager,model_courses,group_courses_manager,1,1,1,1
+access_session_user,session_user,model_session,group_courses_user,1,0,0,0
+access_session_manager,session_manager,model_session,group_courses_manager,1,1,1,1
+access_res.partner_user,res.partner_user,model_res_partner,group_courses_user,1,0,0,0
+access_res.partner_manager,res.partner_manager,model_res_partner,group_courses_user,1,1,1,1

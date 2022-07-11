@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import models , course , session , partner
+from . import models , course , session , partner , product_template

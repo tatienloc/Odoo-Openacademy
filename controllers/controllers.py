@@ -3,10 +3,16 @@
 
 #class Openacademy(http.Controller):
 #     @http.route('/openacademy' , auth="public" , type="json" )
-#     def index(self):
-#          for rec in self:
-#               dele = self.env["courses"].browse(20)
-#               dele.unlink()
+#     def index(self,**kw):
+#         contacts = http.request.env['courses'].sudo().search([])
+
+#         contact_list = []
+#         for contact in contacts:
+#             contact_list.append({
+#                 'title': contact.title,
+#                 'description': contact.description,})
+#         return contact_list
+
 
 
 # sửa dữ liệu
@@ -27,17 +33,5 @@
 #                                                       , 'phone' :kw['phone'] , 'course' :kw['course']})
 #         return kw
 
-# lấy dữ liệu
-#         contacts = http.request.env['courses'].sudo().search([])
 
-#         contact_list = []
-#         for contact in contacts:
-#           contact_list.append(
-#          {
-#                'name' : contact.name ,
-#               'email' : contact.email ,
-#              'phone' : contact.phone ,
-#             'course' : contact.course ,
-#     })
-#        return contact_list
 
